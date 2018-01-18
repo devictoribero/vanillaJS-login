@@ -1,0 +1,32 @@
+@mixin generateGradientBackground ($color1, $color2)
+  background-color: $color1
+  background: -moz-linear-gradient( 60deg, $color1, $color2 )
+  background: -ms-linear-gradient( 60deg, $color1, $color2 )
+  background: -webkit-linear-gradient( 60deg, $color1, $color2 )
+  &:hover
+    background: -moz-linear-gradient( 60deg, darken($color1, 5%), darken($color2, 5%) )
+    background: -ms-linear-gradient( 60deg, darken($color1, 5%), darken($color2, 5%) )
+    background: -webkit-linear-gradient( 60deg, darken($color1, 5%), darken($color2, 5%) )
+
+@mixin commonButtonProperties ( )
+  display: block
+  text-align: center
+  width: 100%
+  border-radius: 500px
+  border: none
+  letter-spacing: 1px
+  color: white
+  font-weight: 400
+  font-size: 12px
+  position: relative
+  padding: 15px
+  font-weight: 600
+
+@mixin hoverable()
+  &:hover
+    cursor: pointer
+
+.text-centered
+  text-align: center
+.text-left
+  text-align: left

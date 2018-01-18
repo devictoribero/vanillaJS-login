@@ -1,0 +1,53 @@
+@import './palette'
+@import './mixins'
+
+// Where the button continue is included
+.loginSignupModule
+  .loginSignupForm_continueButtonBar
+    display: flex
+    flex-direction: row-reverse
+    position: absolute
+    bottom: 20px
+    left: 20px
+    right: 20px
+
+  // Buttons continue
+  .loginSignupForm__btn-continue
+    border-radius: 500px
+    width: 50px
+    height: 50px
+    border: none
+    color: white
+    font-size: 22px
+    @include generateGradientBackground($basicTurquoise, darken($basicTurquoise, 25%))
+    @include hoverable()
+
+  .loginSignupForm__btn-confirmation
+    display: none
+
+@media (min-width: 768px)
+  .loginSignupModule
+    .loginSignupForm__btn-continue
+      width: 75px
+      height: 75px
+      font-size: 30px
+
+@media (min-width: 1024px)
+  .loginSignupModule
+    .loginSignupForm_continueButtonBar
+      margin: 0 auto
+      margin-top: 40px
+      width: 400px
+      max-width: 400px
+      position: initial
+      bottom: inherit
+      left: inherit
+      right: inherit
+
+    .loginSignupForm__btn-continue
+      border-radius: 5px
+      width: 100%
+      height: auto
+      padding: 10px
+      font-size: 20px
+      font-weight: bold

@@ -1,0 +1,39 @@
+// Main container of the Module
+.loginSignupModule
+  padding: 20px
+  text-align: center
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  box-sizing: border-box
+  background: white
+  z-index: 999999
+  display: none
+  overflow: auto
+  // subcontainer for the layout
+  .loginSignupModule__children
+    left: -50px
+    //height: calc(100% - 100px)
+    opacity: 0
+    width: 100%
+    max-width: 375px
+    margin: 0 auto
+
+@media (min-width: 768px)
+  .loginSignupModule
+    padding: 50px
+    .loginSignupModule__children
+      max-width: 400px
+      //height: calc(100% - 150px)
+
+@media (min-width: 1024px)
+  .loginSignupModule
+    .loginSignupModule__children
+      height: auto
+
+@media (min-width: 1024px)
+  .loginSignupModule
+    .loginSignupModule__children
+      max-width: 400px

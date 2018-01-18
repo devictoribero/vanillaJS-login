@@ -1,0 +1,28 @@
+@import './palette'
+@import './mixins'
+
+// Wrapper
+.loginSignupForm__loginBtn
+  @include commonButtonProperties()
+  i
+    position: absolute
+    left: 20px
+    top: 10px
+    font-size: 22px
+  &:hover
+    cursor: pointer
+  &:focus
+    outline: none
+
+// Registar via FB button
+.loginSignupForm__loginBtn--fb
+  margin-bottom: 20px
+  @include generateGradientBackground($fbColor1, $fbColor2)
+
+// Registar via email button
+.loginSignupForm__loginBtn--manual
+  @include generateGradientBackground($basicTurquoise, darken($basicTurquoise, 25%))
+
+button.disabled
+  opacity: 0.5
+  pointer-events: none

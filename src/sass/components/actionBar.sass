@@ -1,0 +1,20 @@
+// Where GoBackButton and closeModal are included
+.loginSignupModule
+  .loginSignupForm_topActionBar
+    display: flex
+    justify-content: space-between
+    flex-direction: row-reverse
+  // GoBack and Close buttons
+  .loginSignupForm__goBack,
+  .loginSignupForm__close
+    font-weight: 100
+    font-size: 30px
+    color: $colorSubtitle
+    &:hover
+      cursor: pointer
+
+@media (min-width: 768px)
+  .loginSignupModule
+    .loginSignupForm__goBack,
+    .loginSignupForm__close
+      font-size: 50px
